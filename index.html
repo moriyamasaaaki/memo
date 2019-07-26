@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>MEMO.js</title>
+  </head>
+  <body>
+
+    <h1>MASAAKI / MEMO</h1>
+      <div class="container">
+        <div class="memo">
+          <input id="title" type="text" placeholder="タイトル" name="" value="">
+          <textarea id="sentences" placeholder="メモ欄"></textarea>
+          <div class="btn" id="save">保存</div>
+          <div class="btn" id="delete">削除</div>
+            <p><span id="label"></span> 文字目</p>
+    </div>
+    <div class="memolist">
+      <table id="list">
+        <h2>MEMO List</h2>
+        <thead>
+          <tr>
+            <th></th>
+            <th>title</th>
+            <th>content</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  </body>
+</html>
