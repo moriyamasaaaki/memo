@@ -1,0 +1,12 @@
+{
+  "name": "js.if",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/moriyamasaaaki/memo.git",
+  "author": "moriyamasaaaki <moriya-7071@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.13.0"
+  }
+}
