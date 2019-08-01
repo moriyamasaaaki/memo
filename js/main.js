@@ -15,9 +15,6 @@
   });
 })();
 
-var formatedRecs
-
-
 $(document).ready(function() {
   /** 登録ボタンクリック */
   $('#save').click(function() {
@@ -49,7 +46,7 @@ $(document).ready(function() {
   function loadStorage() {
     $('#list tbody').empty();
     const recs = [];
-    // let formatedRecs = [];
+    let formatedRecs = [];
     for (let i=0; i<localStorage.length; i++) {
       let rec = '';
       const key = localStorage.key(i); // keyを取得
@@ -81,13 +78,15 @@ $(document).ready(function() {
     }
 
     formatedRecs = recs.sort((x, y)=> {
-      x.date < y.date ? 1 : -1;
-    });
+      return x.date > y.date ? 1 : -1;
+    }).map((rec) => {
+      return rec.data;
+    }).join('');
 
     // console.log(recs.sort((x, y)=> {
     //   x.date < y.date ? 1 : -1;
     // }));
-    
+
 
     // formatedRecs = formatedRecs.map((rec)=>{
     //   rec.data;
@@ -107,7 +106,10 @@ $(document).ready(function() {
     alert('メモを削除しました。');
     loadStorage();
   }
-  
+
   // 登録済みデータ読み込み
   loadStorage();
 });
+Collapse;
+
+
